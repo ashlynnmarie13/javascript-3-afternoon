@@ -18,24 +18,28 @@ var carDetails = {
 // Do not edit the code above.
 
 /*
-  Use object destructuring to save the property values from the object carDetails into new variables. 
+  Use object destructuring to save the property values from the object 
+  carDetails into new variables. 
 */
 
 //Code Here
-
+var {color,make,model,year}=carDetails;
 
 
 ////////// PROBLEM 2 //////////
 
 /*
-  In the function below named greeting, it is receiving an object as a parameter. 
+  In the function below named greeting, it is receiving an object as a 
+  parameter. 
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
 
 function greeting( obj ) {
   //Code Here
-  
+  var firstName=obj.firstName;
+  var lastName=obj.lastName;
+  var title=obj.title;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +58,9 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation(obj){
 
+}
 
 
 ////////// PROBLEM 4 //////////
