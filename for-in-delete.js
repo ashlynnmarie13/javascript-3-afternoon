@@ -36,11 +36,17 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
+  Inside the function showValues, write a for in loop that concatenates 
+  each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+function showValues(obj) {
+  let arr = [];
+ for (var key in obj){
+  arr.push(obj[key])
+ }
+ return arr.join("");
+  //Code Here REVIEW AND ASK
 }
 
 
@@ -49,24 +55,38 @@ function showValues( obj ) {
 
 /*
   Write a function called greaterThan10 that takes in an object. 
-  Write a for in loop that loops over the object and changes any value that is great than 10 to 0. 
+  Write a for in loop that loops over the object and changes any 
+  value that is great than 10 to 0. 
   Return the updated object.
 */
 
 //Code Here
-
+function greaterThan10(obj) {
+  for (var key in obj) {
+    if (obj[key]>10){
+      obj[key]=0
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
 
 /*
   Write a function called double that takes in an object.
-  Write a for in loop that loops over the object and changes every value to be itself multipled by 2.
+  Write a for in loop that loops over the object and changes every 
+  value to be itself multipled by 2.
   Return the updated object.
 */
 
 //Code Here
-
+function double(obj){
+  for (var key in obj) {
+    obj[key]=(obj[key]*2)
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -75,12 +95,23 @@ function showValues( obj ) {
   Write a function called secrets that will take in an object.
   Create an empty string variable.
   Write a for in loop that loops over the object.
-  If the property name starts with an 'sh', concatenate the value to the string variable.
-  By the end of the for in loop, you should have a sentence, return that sentence.
+  If the property name starts with an 'sh', concatenate the value to 
+  the string variable.
+  By the end of the for in loop, you should have a sentence, return that 
+  sentence.
 */
 
 //Code Here
-
+function secrets(obj) {
+  var empty= "";
+  for (var key in obj) {
+    console.log(key)
+    if (key.startsWith('sh')){
+      empty=empty+obj[key];
+    }
+  }
+ return empty
+}
 
 
 /* 
@@ -111,7 +142,10 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function removePassword(obj){
+  delete obj.password;
+  return obj;
+}
 
 
 ////////// PROBLEM 6 //////////
